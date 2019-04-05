@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "dotenv": "^7.0.0"
+    "dotenv": "^7.0.0",
+    "node-fetch": "^2.3.0"
   },
   "name": "analytics",
   "version": "1.0.0",

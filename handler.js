@@ -1,6 +1,7 @@
 "use strict";
 
 require("dotenv").config();
+const fetch = require('node-fetch');
 
 module.exports.slack = (event, context, callback) => {
   fetch(`https://slack.com/api/users.list?token=${process.env.SLACK_TOKEN}`)
