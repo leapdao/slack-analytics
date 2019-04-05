@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "dotenv": "^7.0.0"
+  },
+  "name": "analytics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Onuwa Nnachi Isaac <matrix4u2002@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": ""
+}

@@ -1,16 +1,18 @@
-'use strict';
+"use strict";
 
-module.exports.helloWorld = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-    },
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
+require("dotenv").config();
 
-  callback(null, response);
+module.exports.slack = (event, context, callback) => {
+  fetch(`https://slack.com/api/users.list?token=${process.env.SLACK_TOKEN}`)
+    .then(response => response.json())
+    .then(data => {
+      const response = {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*" // Required for CORS support to work
+        },
+        data: data.members.length
+      };
+      callback(null, response);
+    });
 };
