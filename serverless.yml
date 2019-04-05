@@ -16,7 +16,7 @@ provider:
 functions:
   slack:
     environment:
-      SLACK_TOKEN: ${env: SLACK_TOKEN}
+      SLACK_TOKEN: ${env:SLACK_TOKEN}
     handler: handler.slack
     # The `events` block defines how to trigger the handler.slack code
     events:
