@@ -11,7 +11,7 @@ module.exports.slack = (event, context, callback) => {
         headers: {
           "Access-Control-Allow-Origin": "*" // Required for CORS support to work
         },
-        data: data.members.length
+        body: data.members.length
       };
       callback(null, response);
     });
