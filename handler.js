@@ -1,6 +1,5 @@
 "use strict";
 
-require("dotenv").config();
 const fetch = require('node-fetch');
 
 module.exports.slack = (event, context, callback) => {
